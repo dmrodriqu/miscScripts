@@ -4,8 +4,8 @@ import webbrowser
 
 def main(args):
 
-	regex1 = ur".*(?<=com)"
-	regex2 = ur"(?<=com).*"
+	regex1 = ur'.*(?<=com)'
+	regex2 = ur'(?<=com).*'
 
 	test_str = str(args[1])
 	
