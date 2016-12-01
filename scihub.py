@@ -3,7 +3,7 @@ import sys
 import webbrowser
 
 def main(args):
-
+	# doesn't match if not .com domain
 	regex1 = ur'.*(?<=com)'
 	regex2 = ur'(?<=com).*'
 
