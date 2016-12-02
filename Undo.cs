@@ -13,7 +13,8 @@ public class Undo : MonoBehaviour {
 		var fix = undoStack.Peek ();
 		var scoreKeeper = gameObject.GetComponent<InputField>();
 		scoreKeeper.text = fix;
-		redoStack.Push (undoStack.Pop);
+		var popped = undoStack.Pop ();
+		redoStack.Push (popped);
 	}
 
 
@@ -22,7 +23,8 @@ public class Undo : MonoBehaviour {
 		var unfix = redoStack.Peek ();
 		var unfixableScoreKeeper = gameObject.GetComponent<InputField>();
 		unfixableScoreKeeper.text = unfix;
-		undoStack.Push (redoStack.Pop);
+		var repopped = redoStack.Pop ();
+		undoStack.Push (repopped);
 	}
  }
 
